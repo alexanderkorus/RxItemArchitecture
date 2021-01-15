@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'RxItemArchitecture_Example' do
+  pod 'RxItemArchitecture', :path => '../'
+
+  target 'RxItemArchitecture_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
