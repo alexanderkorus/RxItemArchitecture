@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxItemArchitecture
 
 class ViewController: UIViewController {
 

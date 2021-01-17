@@ -1,6 +1,6 @@
 # RxItemArchitecture
 
-[![CI Status](https://img.shields.io/travis/alexanderkorus-oskar/RxItemArchitecture.svg?style=flat)](https://travis-ci.org/alexanderkorus-oskar/RxItemArchitecture)
+[![CI Status](https://img.shields.io/travis/alexanderkorus/RxItemArchitecture.svg?style=flat)](https://travis-ci.org/alexanderkorus/RxItemArchitecture)
 [![Version](https://img.shields.io/cocoapods/v/RxItemArchitecture.svg?style=flat)](https://cocoapods.org/pods/RxItemArchitecture)
 [![License](https://img.shields.io/cocoapods/l/RxItemArchitecture.svg?style=flat)](https://cocoapods.org/pods/RxItemArchitecture)
 [![Platform](https://img.shields.io/cocoapods/p/RxItemArchitecture.svg?style=flat)](https://cocoapods.org/pods/RxItemArchitecture)
@@ -22,7 +22,7 @@ pod 'RxItemArchitecture'
 
 ## Author
 
-alexanderkorus-oskar, alexander.korus@svote.io
+alexanderkorus, alexander.korus@svote.io
 
 ## License
 
