@@ -37,7 +37,7 @@ open class BaseViewController<ViewType: UIView>: UIViewController {
 	open func bindViews() {}
 }
 
-extension BaseViewController {
+public extension BaseViewController {
 	// swiftlint:disable:next force_cast
 	unowned var rootView: ViewType { self.view as! ViewType }
 }
