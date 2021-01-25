@@ -58,6 +58,6 @@ open class BaseItemViewController<ViewModel: BaseItemViewModel<State>, State: Ba
 	}
 }
 
-extension BaseItemViewController {
+public extension BaseItemViewController {
 	unowned var tableView: UITableView { self.rootView.tableView }
 }
