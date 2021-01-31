@@ -13,7 +13,7 @@ import UIKit
 open class BaseViewController<ViewType: UIView>: UIViewController {
 
 	// MARK: - Stored properties
-	let bag: DisposeBag = DisposeBag()
+	public let bag: DisposeBag = DisposeBag()
 
 	// MARK: - Computed properties
 

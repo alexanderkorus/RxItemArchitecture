@@ -13,9 +13,9 @@ import RxCocoa
 open class CustomBaseItemViewController<ViewModel: BaseItemViewModel<State>, State: BaseItemState, View: BaseItemView>: BaseViewController<View> {
 
 	// MARK: - Stored properties
-	private let dataSource: RxTableViewSectionedReloadDataSource<ItemGroup>
-	let viewModel: ViewModel
-	let configuration: ((UIViewController) -> Void)?
+	public let dataSource: RxTableViewSectionedReloadDataSource<ItemGroup>
+	public let viewModel: ViewModel
+	public let configuration: ((UIViewController) -> Void)?
 
 	// MARK: - Initializer
 	init(

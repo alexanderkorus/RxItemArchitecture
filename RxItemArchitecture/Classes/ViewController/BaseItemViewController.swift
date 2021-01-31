@@ -14,9 +14,9 @@ import RxSwift
 open class BaseItemViewController<ViewModel: BaseItemViewModel<State>, State: BaseItemState>: BaseViewController<BaseItemView> {
 
 	// MARK: - Stored properties
-	private let dataSource: RxTableViewSectionedReloadDataSource<ItemGroup>
-	let viewModel: ViewModel
-	let configuration: ((UIViewController) -> Void)?
+	public let dataSource: RxTableViewSectionedReloadDataSource<ItemGroup>
+	public let viewModel: ViewModel
+	public let configuration: ((UIViewController) -> Void)?
 
 	// MARK: - Initializer
 	public init(
