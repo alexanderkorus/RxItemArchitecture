@@ -18,7 +18,7 @@ open class CustomBaseItemViewController<ViewModel: BaseItemViewModel<State>, Sta
 	public let configuration: ((UIViewController) -> Void)?
 
 	// MARK: - Initializer
-	init(
+	public init(
 		dataSource: RxTableViewSectionedReloadDataSource<ItemGroup> = BaseDataSource(),
 		viewModel: ViewModel,
 		backgroundImage: UIImage? = nil,
