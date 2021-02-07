@@ -12,7 +12,7 @@ import SnapKit
 open class BaseItemView: UIView {
 
 	// MARK: - Subviews
-	let backgroundImageView: UIImageView = {
+	public let backgroundImageView: UIImageView = {
 		let imageView = UIImageView()
 		imageView.contentMode = .scaleAspectFill
 		imageView.clipsToBounds = true
@@ -20,7 +20,7 @@ open class BaseItemView: UIView {
 		return imageView
 	}()
 
-	let tableView: UITableView = {
+	public let tableView: UITableView = {
 		let tableView = UITableView()
 		tableView.estimatedRowHeight = 100
 		tableView.rowHeight = UITableView.automaticDimension
