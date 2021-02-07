@@ -30,7 +30,7 @@ open class BaseItemView: UIView {
 	}()
 
 	// MARK: - Initializer
-	override init(frame: CGRect) {
+	public override init(frame: CGRect) {
 		super.init(frame: frame)
 
 		backgroundColor = .white
