@@ -8,6 +8,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import UIKit
 
 public struct SegmentedControlItem: BaseItem {
 
