@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit
 import RxSwift
@@ -25,3 +25,4 @@ open class BaseItemViewModel<S: BaseItemState>: ViewModel<S> {
 
 	open func onCellTapped(by indexPath: IndexPath, in tableView: UITableView, in viewController: UIViewController) {}
 }
+#endif

@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import RxSwift
 import RxCocoa
@@ -41,3 +41,4 @@ public extension BaseViewController {
 	// swiftlint:disable:next force_cast
 	unowned var rootView: ViewType { self.view as! ViewType }
 }
+#endif

@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit
 
@@ -24,3 +24,4 @@ public class EmptyBaseCell: UITableViewCell, BaseCell {
 
 	}
 }
+#endif

@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 
 public class ItemManager {
@@ -33,3 +33,4 @@ public class ItemManager {
 
 	public var viewControllerConfig: ((UIViewController) -> Void)? = nil
 }
+#endif

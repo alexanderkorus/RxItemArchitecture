@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import RxCocoa
 import RxSwift
@@ -22,3 +22,4 @@ public struct BaseState: BaseItemState {
 
 	public var items: BehaviorRelay<[ItemGroup]>
 }
+#endif

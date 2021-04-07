@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 
 /// The base class for ViewModels with a generic state type. Should be used for business logic.
@@ -19,3 +19,4 @@ open class ViewModel<StateType: State> {
 		self.state = initialState
 	}
 }
+#endif

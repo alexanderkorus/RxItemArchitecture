@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit
 import SnapKit
@@ -53,3 +53,4 @@ open class BaseItemView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 }
+#endif

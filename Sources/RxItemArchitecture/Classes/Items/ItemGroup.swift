@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import RxDataSources
 
@@ -35,3 +35,4 @@ public struct BaseSourceItem {
 
 	public var item: BaseItem
 }
+#endif

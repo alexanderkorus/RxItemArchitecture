@@ -1,16 +1,17 @@
 //
-//  CustomBaseItemViewController.swift
+//  BaseItemViewController.swift
 //  RxItemArchitecture
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import UIKit
 import RxDataSources
 import RxCocoa
+import RxSwift
 
-open class CustomBaseItemViewController<ViewModel: BaseItemViewModel<State>, State: BaseItemState, View: BaseItemView>: BaseViewController<View> {
+open class BaseItemViewController<ViewModel: BaseItemViewModel<State>, State: BaseItemState>: BaseViewController<BaseItemView> {
 
 	// MARK: - Stored properties
 	public let dataSource: RxTableViewSectionedReloadDataSource<ItemGroup>
@@ -49,10 +50,6 @@ open class CustomBaseItemViewController<ViewModel: BaseItemViewModel<State>, Sta
 	}
 
 	// MARK: - Instance methods
-	open override func bindData() {
-
-	}
-
 	open override func bindViews() {
 
 		viewModel.state.items.asObservable()
@@ -61,6 +58,7 @@ open class CustomBaseItemViewController<ViewModel: BaseItemViewModel<State>, Sta
 	}
 }
 
-public extension CustomBaseItemViewController {
+public extension BaseItemViewController {
 	unowned var tableView: UITableView { self.rootView.tableView }
 }
+#endif

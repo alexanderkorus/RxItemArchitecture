@@ -4,7 +4,7 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import UIKit
 
 extension UITableView {
@@ -28,3 +28,4 @@ extension UITableView {
 	}
 
 }
+#endif

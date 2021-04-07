@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxItemArchitecture'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A reactive architecture framework to easily build screens based on table views'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
 	s.ios.deployment_target = '11.0'
 	s.swift_version         = "5.0"
 
-  s.source_files = 'RxItemArchitecture/Classes/**/*'
+  s.source_files = 'Sources/RxItemArchitecture/Classes/**/*'
   
   # s.resource_bundles = {
   #   'RxItemArchitecture' => ['RxItemArchitecture/Assets/*.png']
@@ -43,5 +43,4 @@ Pod::Spec.new do |s|
 	s.dependency 'RxSwift'
 	s.dependency 'RxDataSources'
 	s.dependency 'RxCocoa'
-	s.dependency 'SSegmentControl', '~> 0.1.1'
 end

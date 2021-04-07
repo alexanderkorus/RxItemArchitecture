@@ -4,11 +4,10 @@
 //
 //  Created by Alexander Korus on 15.01.21.
 //
-
+#if canImport(UIKit)
 import Foundation
 import RxCocoa
 import RxSwift
-import SSegmentControl
 
 public struct SegmentedControlItem: BaseItem {
 
@@ -30,10 +29,10 @@ public struct SegmentedControlItem: BaseItem {
 
 	public enum SegmentControlType {
 		case apple
-		case material
+		//case material
 	}
 
-	public init(controlType: SegmentedControlItem.SegmentControlType, segments: [String], selectedSegment: BehaviorRelay<Int>, segmentsDisabled: [Int] = [], selectedSegmentFont: UIFont = UIFont.boldSystemFont(ofSize: 14.0), selectedSegmentFontColor: UIColor = UIColor.black, segmentFont: UIFont = UIFont.systemFont(ofSize: 14.0), segmentFontColor: UIColor = UIColor.black, disabledSegmentFontColor: UIColor = UIColor.lightGray, selectorColor: UIColor = UIColor.black) {
+	public init(controlType: SegmentedControlItem.SegmentControlType = .apple, segments: [String], selectedSegment: BehaviorRelay<Int>, segmentsDisabled: [Int] = [], selectedSegmentFont: UIFont = UIFont.boldSystemFont(ofSize: 14.0), selectedSegmentFontColor: UIColor = UIColor.black, segmentFont: UIFont = UIFont.systemFont(ofSize: 14.0), segmentFontColor: UIColor = UIColor.black, disabledSegmentFontColor: UIColor = UIColor.lightGray, selectorColor: UIColor = UIColor.black) {
 		self.controlType = controlType
 		self.segments = segments
 		self.selectedSegment = selectedSegment
@@ -53,7 +52,7 @@ class SegmentedControlCell: UITableViewCell, BaseCell {
 	static var identifier: String = "SegmentedControlCell"
 
 	// MARK: - Subviews
-	var segmentControl: SSegmentControl?
+	//var segmentControl: SSegmentControl?
 
 	let appleSegmentControl: UISegmentedControl = {
 		let view = UISegmentedControl()
@@ -81,9 +80,9 @@ class SegmentedControlCell: UITableViewCell, BaseCell {
 		super.prepareForReuse()
 
 		bag = DisposeBag()
-		segmentControl?.removeFromSuperview()
-		segmentControl?.segments = []
-		segmentControl?.segmentDidChanged = nil
+		//segmentControl?.removeFromSuperview()
+		//segmentControl?.segments = []
+		//segmentControl?.segmentDidChanged = nil
 
 		appleSegmentControl.removeFromSuperview()
 	}
@@ -94,9 +93,9 @@ class SegmentedControlCell: UITableViewCell, BaseCell {
 		guard let item = item as? T else { return }
 
 		self.selectedSegment = item.selectedSegment
-		self.segmentControl = nil
+		//self.segmentControl = nil
 
-		if item.controlType == .material {
+		/*if item.controlType == .material {
 
 			self.segmentControl = makeSegmentControl()
 			guard let segmentControl = self.segmentControl else { return }
@@ -138,7 +137,7 @@ class SegmentedControlCell: UITableViewCell, BaseCell {
 				self.selectedSegment.accept(index)
 			}
 
-		} else {
+		} else {*/
 
 			appleSegmentControl.removeAllSegments()
 			appleSegmentControl.translatesAutoresizingMaskIntoConstraints = false
@@ -157,17 +156,18 @@ class SegmentedControlCell: UITableViewCell, BaseCell {
 			appleSegmentControl.selectedSegmentIndex = item.selectedSegment.value
 
 			appleSegmentControl.addTarget(self, action: #selector(appleSegmentChanged), for: .valueChanged)
-		}
+		//}
 	}
 
 	@objc func appleSegmentChanged() {
 		self.selectedSegment.accept(appleSegmentControl.selectedSegmentIndex)
 	}
 
-	func makeSegmentControl() -> SSegmentControl {
+	/*func makeSegmentControl() -> SSegmentControl {
 		let view: SSegmentControl = SSegmentControl()
 		// Configure appearance of segmentControl
 		view.isShadowHidden = true
 		return view
-	}
+	}*/
 }
+#endif
