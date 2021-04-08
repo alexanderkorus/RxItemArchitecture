@@ -21,7 +21,8 @@ public class ItemManager {
 		TextCell.self,
 		ImageCell.self,
 		ViewControllerCell.self,
-		SegmentedControlCell.self
+		SegmentedControlCell.self,
+		SeperatorCell.self
 	]
 
 	public var itemTypes: [BaseCell.Type] {
