@@ -19,13 +19,15 @@ public struct ImageItem: BaseItem {
 	public var clipsToBounds: Bool = true
 	public var sideSpaces: CGFloat = 20.0
 	public var height: CGFloat = 100.0
+	public var tintColor: UIColor? = nil
 
-	public init(image: UIImage? = nil, contentMode: UIView.ContentMode = .scaleAspectFit, clipsToBounds: Bool = true, sideSpaces: CGFloat = 20.0, height: CGFloat = 100.0) {
+	public init(image: UIImage? = nil, contentMode: UIView.ContentMode = .scaleAspectFit, clipsToBounds: Bool = true, sideSpaces: CGFloat = 20.0, height: CGFloat = 100.0, tintColor: UIColor? = nil) {
 		self.image = image
 		self.contentMode = contentMode
 		self.clipsToBounds = clipsToBounds
 		self.sideSpaces = sideSpaces
 		self.height = height
+		self.tintColor = tintColor
 	}
 }
 
@@ -60,7 +62,12 @@ open class ImageCell: UITableViewCell, BaseCell {
 
 		self.localImageView.clipsToBounds = item.clipsToBounds
 		self.localImageView.contentMode = item.contentMode
-		self.localImageView.image = item.image
+		if let tintColor = item.tintColor {
+			self.localImageView.image = item.image?.withRenderingMode(.alwaysTemplate)
+			self.localImageView.tintColor = tintColor
+		} else {
+			self.localImageView.image = item.image
+		}
 
 		self.localImageView.snp.remakeConstraints {
 			$0.top.equalToSuperview().offset(10.0)
