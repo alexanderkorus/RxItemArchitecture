@@ -17,6 +17,16 @@ public struct SeperatorItem: BaseItem {
 	public var backgroundColor: UIColor = .lightGray
 	public var insets: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
 	public var height: CGFloat = 8.0
+
+	public init(
+		backgroundColor: UIColor = .lightGray,
+		insets: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0),
+		height: CGFloat = 8.0
+	) {
+		self.backgroundColor = backgroundColor
+		self.insets = insets
+		self.height = height
+	}
 }
 
 public class SeperatorCell: UITableViewCell, BaseCell {
