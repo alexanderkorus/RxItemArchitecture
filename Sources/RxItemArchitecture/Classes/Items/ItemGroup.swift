@@ -13,7 +13,7 @@ public struct ItemGroup {
 	let name: String
 	public var items: [Item]
 
-	init(name: String, items: [Item]) {
+	public init(name: String, items: [Item]) {
 
 		self.name = name
 		self.items = items
@@ -34,5 +34,9 @@ extension ItemGroup: SectionModelType {
 public struct BaseSourceItem {
 
 	public var item: BaseItem
+
+	public init(item: BaseItem) {
+		self.item = item
+	}
 }
 #endif
