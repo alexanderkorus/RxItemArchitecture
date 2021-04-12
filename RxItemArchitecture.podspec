@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RxItemArchitecture'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A reactive architecture framework to easily build screens based on table views'
 
 # This description is used to generate tags and improve search results.

@@ -10,7 +10,7 @@ import RxDataSources
 
 public struct ItemGroup {
 
-	let name: String
+	public let name: String
 	public var items: [Item]
 
 	public init(name: String, items: [Item]) {
