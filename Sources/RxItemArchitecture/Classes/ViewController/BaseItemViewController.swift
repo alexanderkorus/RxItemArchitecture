@@ -55,6 +55,13 @@ open class BaseItemViewController<ViewModel: BaseItemViewModel<State>, State: Ba
 		viewModel.state.items.asObservable()
 			.bind(to: tableView.rx.items(dataSource: dataSource))
 			.disposed(by: bag)
+
+		tableView.rx.itemSelected
+			.bind { [weak self] (indexPath) in
+				guard let self = self else { return }
+				self.viewModel.onCellTapped(by: indexPath, in: self.tableView, in: self)
+			}
+			.disposed(by: bag)
 	}
 }
 
