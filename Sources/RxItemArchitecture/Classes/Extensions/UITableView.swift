@@ -7,7 +7,7 @@
 #if canImport(UIKit)
 import UIKit
 
-extension UITableView {
+public extension UITableView {
 
 	func dequeueReusableCell(item: BaseSourceItem, indexPath: IndexPath) -> BaseCell {
 
