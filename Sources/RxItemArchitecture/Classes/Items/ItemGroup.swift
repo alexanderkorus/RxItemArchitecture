@@ -39,4 +39,38 @@ public struct BaseSourceItem {
 		self.item = item
 	}
 }
+
+public struct CollectionItemGroup {
+
+	public let name: String
+	public var items: [Item]
+
+	public init(name: String, items: [Item]) {
+
+		self.name = name
+		self.items = items
+	}
+}
+
+extension CollectionItemGroup: SectionModelType {
+
+	public typealias Item = BaseCollectionSourceItem
+
+	public init(original: CollectionItemGroup, items: [BaseCollectionSourceItem]) {
+
+		self = original
+		self.items = items
+	}
+}
+
+public struct BaseCollectionSourceItem {
+
+	public var item: BaseCollectionItem
+
+	public init(item: BaseCollectionItem) {
+		self.item = item
+	}
+}
+
+
 #endif

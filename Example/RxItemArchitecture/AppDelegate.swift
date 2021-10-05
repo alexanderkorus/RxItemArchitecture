@@ -17,9 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-		// Override point for customization after application launch.
+		// Register Collection items
+		ItemManager.default.addCollectionTypes([
+			PageCollectionViewCell.self
+		])
 
-		self.window?.rootViewController = BaseItemViewController(viewModel: TestViewModel(initialState: .default))
+		self.window?.rootViewController = TestViewController(
+			viewModel: TestViewModel(initialState: .default)
+		)
+
 		self.window?.makeKeyAndVisible()
 
         return true
