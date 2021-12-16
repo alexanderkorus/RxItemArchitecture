@@ -10,13 +10,17 @@ import UIKit
 
 public struct ViewControllerItem: BaseItem {
 
+	public init(viewController: UIViewController, parentVC: UIViewController) {
+		self.viewController = viewController
+		self.parentVC = parentVC
+	}
+
 	public var type: BaseCell.Type {
 		ViewControllerCell.self
 	}
 
 	public let viewController: UIViewController
 	public let parentVC: UIViewController
-	public var isCollectionView = false
 }
 
 open class ViewControllerCell: UITableViewCell, BaseCell {

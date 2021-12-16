@@ -4,5 +4,4 @@ platform :ios, '11.0'
 
 target 'RxItemArchitecture_Example' do
   pod 'RxItemArchitecture', :path => '../'
-
 end
